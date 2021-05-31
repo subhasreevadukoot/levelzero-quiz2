@@ -8,6 +8,7 @@ let level = 1;
 console.log(chalk.blue.underline.bold('Let us see how well you know JavaScript'));
 console.log(' ');
 
+
 const play = (question, answer) => {
 
 let userAnswer= readLineSync.question(question);
