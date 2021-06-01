@@ -1,5 +1,6 @@
 const chalk = require('chalk');
 const readLineSync = require('readline-sync');
+
 let userName= readLineSync.question("Hello, may I have your name? ");
 
 console.log('Welcome', chalk.yellow(userName))
@@ -15,7 +16,7 @@ let userAnswer= readLineSync.question(question);
 
 if(userAnswer.toLowerCase()===answer.toLowerCase())
 {
-  console.log("Yay!! You know me");
+  console.log("Yay!! That's correct");
   score=score+1;
 }
 else if(userAnswer.toLowerCase()!==answer.toLowerCase())
@@ -24,11 +25,14 @@ else if(userAnswer.toLowerCase()!==answer.toLowerCase())
   console.log(chalk.yellow("--------------------"))
 }
 
-if (score>5){
+if (score>2 && score<4){
   level=2;
 }
-else if(score>10){
+else if(score>=4){
   level=3;
+}
+else if(score === 5){
+  console.log(chalk.green.purple('You are a pro!!', score));
 }
 console.log(chalk.green.bold('current score:', score));
 console.log(chalk.green.bold('current level:', level));
@@ -42,41 +46,35 @@ var questions = [{
   answer:'c',
 },
 {
-  question:`JavaScript is a ___ -side programming language. a:server b: client c:both`,
+  question:`Which of the following function of String object returns the character at the specified index?
+  a - charAt()
+  b - charCodeAt()
+  c - concat()`,
+  answer:'a',
+},
+{
+  question:`JavaScript is a ___ -side programming language. 
+  a:server 
+  b:client 
+  c:both`,
   answer:'c',
-},
-{
-  question:`Which of the following will write the message “Hello” in an alert box? 
-   
-  a: alertBox(“Hello DataFlair!”);  
-  b: alert(“Hello DataFlair!”);`` ,
-  c : msgAlert(“Hello DataFlair!”);`,
-   answer:'b',
-},
-{
-  question:`Which of the following will write the message “Hello” in an alert box? 
-   
-  a: alertBox(“Hello DataFlair!”);  
-  b: alert(“Hello DataFlair!”);`` ,
-  c : msgAlert(“Hello DataFlair!”);`,
-   answer:'b',
 },
 {
   question:`How do you find the minimum of x and y using JavaScript?
    
-  a: Math.min(x,y)
-  b: min(x,y) 
+  a:  Math.min(x,y)
+  b:  min(x,y) 
   c : (x,y).min()`,
-   answer:'b',
+   answer:'a',
 },
-{
-  question:`Which of the following will write the message “Hello” in an alert box? 
-   
-  a: alertBox(“Hello DataFlair!”);  
-  b: alert(“Hello DataFlair!”);`` ,
-  c : msgAlert(“Hello DataFlair!”);`,
-   answer:'b',
-}]
+ {
+  question:` Which of the following is true about typeof operator in JavaScript?
+
+a : The typeof is a unary operator that is placed before its single operand, which can be of any type.
+b : Its value is a string indicating the data type of the operand.
+c : Both of the above.`,
+   answer:'c',
+} ]
 
 for (let i=0;i<questions.length;i++){
   let currentQuestion=questions[i];
