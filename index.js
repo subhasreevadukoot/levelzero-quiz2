@@ -42,14 +42,16 @@ var questions = [{
   question:`Inside which HTML element do we put the JavaScript? 
   a: <js> 
   b: <nojs> 
-  c:<script>`,
+  c:<script>
+  :  `,
   answer:'c',
 },
 {
   question:`Which of the following function of String object returns the character at the specified index?
   a - charAt()
   b - charCodeAt()
-  c - concat()`,
+  c - concat()
+  :  `,
   answer:'a',
 },
 {
@@ -64,7 +66,8 @@ var questions = [{
    
   a:  Math.min(x,y)
   b:  min(x,y) 
-  c : (x,y).min()`,
+  c : (x,y).min()
+  :  `,
    answer:'a',
 },
  {
@@ -72,7 +75,8 @@ var questions = [{
 
 a : The typeof is a unary operator that is placed before its single operand, which can be of any type.
 b : Its value is a string indicating the data type of the operand.
-c : Both of the above.`,
+c : Both of the above.
+:   `,
    answer:'c',
 } ]
 
